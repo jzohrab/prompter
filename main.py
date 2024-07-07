@@ -16,11 +16,11 @@ def speak(text):
     print(text)
     os.system(f"say -v Daniel \"{text}\"")
 
-def start_prompt(period, phrases):
+def start_prompt(interval, phrases):
     while True:
         random.shuffle(phrases)
         for phrase in phrases:
-            time.sleep(period)
+            time.sleep(interval)
 
             # Repeat after a brief pause.
             speak(phrase)
@@ -33,9 +33,9 @@ def main(duration_mins):
     threads = []
 
     for entry in config:
-        period = entry['period']
+        interval = entry['interval']
         phrases = entry['say']
-        thread = threading.Thread(target=start_prompt, args=(period, phrases))
+        thread = threading.Thread(target=start_prompt, args=(interval, phrases))
         thread.daemon = True
         thread.start()
         threads.append(thread)

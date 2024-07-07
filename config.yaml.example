@@ -1,12 +1,12 @@
 # Copy to config.yaml, edit with your prompts
 
-- period: 67   # seconds
+- interval: 67   # seconds
   say:
     - Relax, let go.
     - Breathe deeply.
     - Relax your shoulders.
     - Relax your pick grip.
-- period: 45    # seconds
+- interval: 45    # seconds
   say:
     - lick 1
     - lick 2
